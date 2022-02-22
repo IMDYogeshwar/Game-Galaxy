@@ -1,3 +1,3 @@
 <?php
-$con=mysqli_connect("localhost","root","","chatroom") or die("connection was not estabilised");
+$con=mysqli_connect("localhost","root","","game_galaxy") or die("connection was not estabilised");
 ?>

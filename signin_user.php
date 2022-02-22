@@ -15,12 +15,21 @@ if(isset($_POST['sign_in'])){
     if($check_user==1)
     {
         $_SESSION['user_email']=$email;
-        $get_user="select * from users where user_email='$user'";
+        $get_user="select * from users where user_email='$email'";
         $run_user=mysqli_query($con,$get_user);
         $row=mysqli_fetch_array($run_user);
 
         $user_name = $row['user_name'];
-        echo "<script>window.open('entry.html?user_name=$user_name','_self')</script>";
+
+        echo "<script>
+        document.getElementById(`nr`).style.visibility='hidden';
+        document.getElementById(`box`).style.visibility='hidden';
+        document.getElementById(`o`).innerHTML=`Login Succes !!`;
+        setTimeout
+        (function()
+         {
+             window.open('Dashboard.html?user_name=$user_name','_self')}, 2000);
+        </script>";
     }
     else{
         echo "<script>alert('check your email and password')</script>";

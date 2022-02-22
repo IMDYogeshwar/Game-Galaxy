@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="designe.css"></link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my first web development project</title>
+    <title>SignUp Page</title>
 </head>
 <body>
     <nav class="navbar">
@@ -23,7 +23,7 @@
     <section class="sec b"> 
         <div class="paradiv">
           
-            <h1 class="heading">Online <span >Gaming</span> Website</h1>
+            <h1 class="heading" id="demo">Online <span >Gaming</span> Website</h1>
             <a href="index.php"> 
             <button class="btn">Sing In Now</button></a>
 

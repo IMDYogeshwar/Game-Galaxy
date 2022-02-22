@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Queens diery</title>
+  <title>Games</title>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -32,6 +32,7 @@
     }
 
     .panel {
+      cursor: pointer;
       background: #6B0F9C;
       box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
       color: white;
@@ -52,10 +53,10 @@
       flex-direction: column;
     }
 
-    .panel1 { background-image:url(img/bg.jpg);}
-    .panel2 { background-image:url(img/background.jpg);}
-    .panel3 { background-image:url(img/bg1.jpg);}
-    .panel4 { background-image:url(img/slider.jfif);}
+    .panel1 { background-image:url(img/car.png);}
+    .panel2 { background-image:url(img/bird.png);}
+    .panel3 { background-image:url(img/Xo.png);}
+    .panel4 { background-image:url(img/pingpong.jpg);}
     
 
     /* Flex Items */
@@ -99,21 +100,21 @@
 
 
   <div class="panels">
-    <div class="panel panel1">
+    <div class="panel panel1" onclick="c1()">
       <p>g</p>
     
     </div>
-    <div class="panel panel2">
+    <div class="panel panel2" onclick="c2()">
     
       <p>a</p>
       
     </div>
-    <div class="panel panel3">
+    <div class="panel panel3" onclick="c3()">
     
       <p>m</p>
     
     </div>
-    <div class="panel panel4">
+    <div class="panel panel4" onclick="c4()">
      
       <p>e</p>
     </div>
@@ -138,6 +139,21 @@
 
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+    //<script type="text/javascript">
+    function c1() {
+    location.href = "car/index.html";
+      };
+      function c2() {
+    location.href = "bird/index.html";
+      };
+      function c3() {
+    location.href = "tic-tac-toe/index.html";
+      };
+      function c4() {
+    location.href = "pingpong/index.html";
+      };
+</script>
   </script>
 
 </body>

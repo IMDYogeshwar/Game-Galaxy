@@ -4,11 +4,15 @@
     <link rel="stylesheet" href="designe.css"></link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my first web development project</title>
-    <!-- <script defer src="validation.js"></script> -->
+    <title>Login Page</title>
+    <script type = "text/javascript" >  
+    function preventBack() { window.history.forward(); }  
+    setTimeout("preventBack()", 0);  
+    window.onunload = function () { null };  
+</script> 
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="nr">
     
         <img src="img/bg1.jpg" width="40%">
     
@@ -21,13 +25,13 @@
     </nav>
 
 
-    <section class="sec b"> 
+    <section class="sec b" id="sc"> 
         <div class="paradiv">
           
-            <h1 class="heading">Online <span >Gaming</span> Website</h1>
+            <h1 class="heading" id="o">Online <span >Gaming</span> Website</h1>
             <a href="signup.php">  
                 <button class="btn"> Sing Up Now</button></a>
-            <form class="box" method="POST" autocomplete="off" >
+            <form class="box" method="POST" id="box" autocomplete="off" >
                 <h1>LOGIN</h1>
                 <input type="text" name="user_email" placeholder="email" required/>
                 <input type="password" name="user_pass" placeholder="Password" required/>
@@ -37,10 +41,10 @@
              include("signin_user.php");
              ?>
             </form>
-           
+         
         </div>
           
     </section>
-        
+    
 </body>
 </html>
