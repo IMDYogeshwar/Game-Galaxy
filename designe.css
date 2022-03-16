@@ -9,6 +9,7 @@ body {
   background: url("img/background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+  overflow-x: hidden;
 }
 /* navigation */
 
@@ -29,7 +30,7 @@ body {
   display: flex;
   text-decoration: none;
   width: 50%;
-  margin-left: 10%;
+  margin-left: 50%;
 }
 .menu li {
   margin: auto;
@@ -182,4 +183,10 @@ option {
 }
 .box input::placeholder {
   color: white;
+}
+
+@media all and(max-width:500px) {
+  .heading {
+    visibility: hidden;
+  }
 }

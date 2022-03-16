@@ -12,7 +12,7 @@
         <img src="img/bg1.jpg" width="40%">
     
         <ul class="menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.php">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.hmtl">Contact</a></li>
             <li><a href="about.html">About</a></li>

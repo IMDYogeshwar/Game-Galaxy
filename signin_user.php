@@ -24,6 +24,7 @@ if(isset($_POST['sign_in'])){
         echo "<script>
         document.getElementById(`nr`).style.visibility='hidden';
         document.getElementById(`box`).style.visibility='hidden';
+        document.getElementById(`btn`).style.visibility='hidden';
         document.getElementById(`o`).innerHTML=`Login Succes !!`;
         setTimeout
         (function()

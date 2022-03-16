@@ -17,9 +17,9 @@
         <img src="img/bg1.jpg" width="40%">
     
         <ul class="menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="contact.hmtl">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
@@ -30,7 +30,7 @@
           
             <h1 class="heading" id="o">Online <span >Gaming</span> Website</h1>
             <a href="signup.php">  
-                <button class="btn"> Sing Up Now</button></a>
+                <button class="btn" id="btn"> Sing Up Now</button></a>
             <form class="box" method="POST" id="box" autocomplete="off" >
                 <h1>LOGIN</h1>
                 <input type="text" name="user_email" placeholder="email" required/>
