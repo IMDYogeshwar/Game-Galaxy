@@ -19,7 +19,7 @@
         <ul class="menu">
             <li><a href="index.php">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
@@ -27,22 +27,27 @@
 
     <div>
       <div class="contact-form-wrapper d-flex justify-content-center">
-        <form action="#" class="contact-form">
+        <form  method="post" class="contact-form">
           <h5 class="title">Contact us</h5>
           <p class="description">Feel free to contact us if you need any assistance, any help or another question.
           </p>
           <div>
-            <input type="text" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" required>
+            <input type="text" name="name" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" required>
           </div>
           <div>
-            <input type="email" class="form-control rounded border-white mb-3 form-input" placeholder="Email" required>
+            <input type="email" name="email" class="form-control rounded border-white mb-3 form-input" placeholder="Email" required>
           </div>
           <div>
-            <textarea id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" placeholder="Message" required></textarea>
+            <textarea id="message" name="msg" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30" placeholder="Message" required></textarea>
           </div>
           <div class="submit-button-wrapper">
-            <input type="submit" value="Send">
+            <input type="submit" name="contact" value="Send">
           </div>
+
+          <?php
+          include("contact_us.php");
+          ?>
+
         </form>
       </div>
     </div>
