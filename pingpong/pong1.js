@@ -71,6 +71,7 @@ function drawArc(x, y, r, color){
 }
 
 // listening to the mouse
+
 canvas.addEventListener("mousemove", getMousePos);
 
 function getMousePos(evt){
@@ -78,6 +79,7 @@ function getMousePos(evt){
     
     user.y = evt.clientY - rect.top - user.height/2;
 }
+
 
 // when COM or USER scores, we reset the ball
 function resetBall(){
@@ -118,7 +120,11 @@ function collision(b,p){
 
 // update function, the function that does all calculations
 function update(){
-    
+    if(!h)
+    canvas.removeEventListener("mousemove", getMousePos);
+    if(h)
+    {
+        canvas.addEventListener("mousemove", getMousePos);
     // change the score of players, if the ball goes to the left "ball.x<0" computer win, else if "ball.x > canvas.width" the user win
     if( ball.x - ball.radius < 0 ){
         com.score++;
@@ -171,7 +177,7 @@ function update(){
         // speed up the ball everytime a paddle hits it.
         ball.speed += 0.1;
     }
-}
+}}
 
 // render function, the function that does al the drawing
 function render(){
@@ -205,5 +211,32 @@ function game(){
 let framePerSecond = 50;
 
 //call the game function 50 times every 1 Sec
-let loop = setInterval(game,1000/framePerSecond);
+// let loop = setInterval(game,1000/framePerSecond);
+render();
+var h=true;
+var c=1;
+
+//function for pause and resume button
+function fn()
+{
+    
+    if(c==1)
+    {
+        setInterval(game,1000/framePerSecond);
+    }
+    c++;
+    if(document.getElementById("bt").value=="pause")
+    {
+        h=false;
+        document.getElementById("bt").value="play";
+    }else{
+        h=true;
+        document.getElementById("bt").value="pause";
+    }
+  
+    
+    
+
+    
+}
 

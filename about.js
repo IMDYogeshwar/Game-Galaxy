@@ -1,7 +1,7 @@
 let images = [
     "img/a.jpg",
     "img/b.jpg",
-    "img/c..jpg"
+    "img/c.jpg"
   ];
   let slide = document.getElementById("slider");
   const slider = () => {

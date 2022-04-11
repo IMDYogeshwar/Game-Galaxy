@@ -9,13 +9,46 @@
     <title>Game Galaxy</title>
 </head>
 
+<style>
+
+
+
+
+.button-12 {
+    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #080808;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-12:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+ 
+}
+.button-12:hover{
+    background: #252323;
+}
+
+</style>
+
 <body>
     
      <nav> 
         <label class="logo">Game Galaxy</label>
         <ul>
-            <!-- <li><a href="#">Home</a></li>
-            <li><a href="#score.html">Score</a></li> -->
+           <input type="button" value="Logout" onclick="history.back()" class="button-12" />
         </ul>
     </nav>
 
@@ -37,22 +70,31 @@
         
     </div>
 
-   
+   <?php
+        include("dash.php");
+   ?>
 
 <script>
+
+    //accesing the html elements
     var t=document.getElementById("sd");
     let imag=document.getElementById('imge') ;
     let im=['img/Xo.png','img/bird.webp','img/car.png'];
     let im1=['img/Xo.png','img/bird.webp','img/car.png'];
 
+    //sliding image on dashboard
     setInterval(function(){
         let random =Math.floor(Math.random() * 3);
         imge.src =im[random];
     },2000)
 
+    // transfer to the game page
     document.getElementById("myButton").onclick = function () {
         location.href = "game.html";
     }
+
+    //Back button script
+    
 
 </script>
 </body>
