@@ -26,15 +26,16 @@ if(isset($_POST['sign_in'])){
         document.getElementById(`nr`).style.visibility='hidden';
         document.getElementById(`box`).style.visibility='hidden';
         document.getElementById(`btn`).style.visibility='hidden';
-        document.getElementById(`o`).innerHTML=`Login Succes !!`;
+        document.getElementById(`o`).innerHTML=`Login Success !!`;
         setTimeout
         (function()
          {
-             window.open('Dashboard.html?user_name=$user_name','_self')}, 2000);
+             window.open('Dashboard.html?user_name=$user_name','_self')}, 1000);
         </script>";
     }
     else{
-        echo "<script>alert('check your email and password')</script>";
+        echo "<script>alert('check your email and password go on register in page')
+        location.href=`signup.php.`;</script>";
     }
 }
 ?>

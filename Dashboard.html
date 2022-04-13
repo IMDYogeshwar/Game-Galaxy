@@ -48,7 +48,7 @@
      <nav> 
         <label class="logo">Game Galaxy</label>
         <ul>
-           <input type="button" value="Logout" onclick="history.back()" class="button-12" />
+           <input type="button" value="Logout" onclick="back()" class="button-12" />
         </ul>
     </nav>
 
@@ -94,7 +94,10 @@
     }
 
     //Back button script
-    
+    function back()
+    {
+        location.href="index.php";
+    }
 
 </script>
 </body>
