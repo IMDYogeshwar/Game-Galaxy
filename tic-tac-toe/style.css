@@ -93,7 +93,7 @@ body {
 }
 
 .won::after {
-  color: #BD022F;
+  color: #2702bdbf;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -35,7 +35,7 @@ body {
   list-style: none;
 }
 .menu li a {
-  color: rgb(245, 236, 236);
+  color: rgb(219, 219, 219);
   text-decoration: none;
   font-family: ui-serif;
   transition: all 0.3s;
@@ -44,7 +44,7 @@ body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 body {
-  background-color: #f5e0e5 !important;
+  background-color: #dbdbdb !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
